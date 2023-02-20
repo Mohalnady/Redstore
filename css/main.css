@@ -1,0 +1,316 @@
+*{
+    padding: 0; 
+    margin: 0;
+    list-style: none;
+}
+:root {
+    --dark-color: #000;
+    --light-color: #fff;
+    --main-color: #ff4b1f;
+    --second-color: #ff9068;
+    --text-color: #777;
+    --padding: 60px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 768px) {
+    nav .container ul li a {
+        margin-right: 20px;
+        font-size: 16px;
+        font-weight: 400;
+}
+    .container {
+        width: 750px;
+
+    }
+    header {
+        background-image: hidden;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1220px) {
+    .container {
+        width: 1200px;
+    }
+}
+nav {
+    padding-top: 30px; 
+    height: 50px;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container ul {
+    display: flex;
+    align-items: center;
+}
+nav .container .logo img {
+    width: 160px; 
+}
+nav .container ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-right: 50px;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    transition: .3s ease;
+}
+nav .container ul li a:hover {
+    margin-bottom: 9px; 
+
+}
+nav .container ul img {
+    width: 40px;
+}
+header {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image:  url(/images/image1.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: right;
+}
+header .container {}
+.main-header {
+    padding-top: 400px;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.main-p {
+    color: var(--text-color);
+    font-size: 16px; 
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-top: 40px;
+    width: 700px;
+    line-height: 1.6; 
+}
+.main-btn {
+    padding: 10px 15px;
+    outline: none; 
+    border: 0; 
+    border-radius: 25px;
+    background-color: var(--main-color);
+    width: 200px; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px; 
+    transition: .4s ease;
+}
+.main-btn:hover {
+    transform: scale(1.06);
+}
+.main-btn i {
+    padding-left: 10px; 
+}
+/* ------ featured Products -------- */
+.featured-products {
+    padding: var(--padding) 0;
+}
+.featured-products .row-imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem; 
+}
+.featured-products .container img {
+    width: 100%;
+}
+/* ------ main heading -------- */
+.main-heading {
+    position: relative;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 auto;
+    width: 200px; 
+    text-transform: capitalize;
+    margin-bottom: 100px; 
+}
+.main-heading::after {
+    position: absolute; 
+    content: "";
+    width: 100px; 
+    height: 5px;
+    background-color: var(--main-color);
+    top: 35px; 
+    left: 50%;
+    transform: translateX(-58%);
+    z-index: 111;
+    
+}
+/* ------ Latest Products -------- */
+.latest-products {
+    padding: var(--padding) 0;
+}
+.latest-products .row-latest {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: .8rem; 
+}
+.latest-products .row-latest .col {
+    width: 100%;
+    transition: .4s ease; 
+}
+.latest-products .row-latest .col img {
+    width: 100%
+}
+.fourth-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-color);
+    letter-spacing: .04rem;
+    padding: .5em 0;
+}
+.latest-products .row-latest .col .stars {
+    
+}
+.stars i  {
+    color: rgb(247, 198, 3);
+}
+.stars .deactive  {
+    color: silver;
+}
+.price  {
+    padding: .5em 0; 
+    font-size: 1rem; 
+}
+/* ------ smart band 4 -------- */
+.smart-band {
+    padding: calc(var(--padding)* 2);
+}
+.smart-band .row-smart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.smart-band .row-smart .col {
+    flex-basis: 50%;
+}
+.smart-band .row-smart .img img {
+    width: 100%;
+}
+.smart-band .row-smart .txt .main-header {
+    padding-top: var(--padding); 
+}
+/* ------ Testimonials -------- */
+.testimonials {
+    padding: var(--padding);
+    box-sizing: border-box;
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+    gap: 2rem;
+}
+.testimonials .row-testim .col {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background: var(--light-color);
+    min-width: 300px; 
+    text-align: center; 
+    padding: 1rem;
+}
+.testimonials .row-testim .col .fa-quote-left {
+    font-size: 3rem; 
+    color: var(--main-color);
+}
+.testimonials .row-testim .col .main-p {
+    max-width: 100%;
+}
+.testimonials .row-testim .col .stars {
+    padding-top: .8rem;
+}
+.testimonials .row-testim .col .users {
+    margin-top: 2rem; 
+}
+.testimonials .row-testim .col .users img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.third-title {
+    text-transform: capitalize;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    font-weight: 800; 
+    color: #444;
+}
+/* ------ Marken -------- */
+.marken {
+    padding: var(--padding);
+}
+.marken .row-marken {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.marken .row-marken .col {
+    width: 19%;
+}
+.marken .row-marken .col img {
+    max-width: 100%;
+}
+/* ------ Footer -------- */
+footer {
+    padding: var(--padding);
+    background-color: var(--dark-color);
+}
+footer .row-footer .content {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+footer .row-footer .dow-col {
+    text-align: left;
+    width: 30%;
+}
+footer .row-footer .dow-col .icons img {
+    max-width: 48%;
+    margin-top: 1rem; 
+}
+footer .row-footer .logo-col {
+    text-align: center;
+    width: 30%;
+}
+footer .row-footer .logo-col .main-p {
+    max-width: 100%;
+    padding: 0.8rem;
+}
+footer .row-footer .links-col {
+    text-align: center;
+    width: 20%;
+}
+footer .row-footer hr {
+    border: 1px solid var(--text-color);
+    margin-top: 2rem;
+}
+footer .row-footer .special-p {
+    text-align: center;
+}
+
